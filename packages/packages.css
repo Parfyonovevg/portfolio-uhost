@@ -1,0 +1,129 @@
+main {
+  margin-top: 3.1rem;
+}
+main a {
+  text-decoration: none;
+  padding: 3.1rem;
+  display: block;
+}
+
+.plans-container {
+  border: 4px solid green;
+  border-left: none;
+  height: auto;
+  margin-top: 1.2rem;
+  width: 80%;
+  max-width: 80rem;
+  opacity: 0.9;
+  overflow: hidden;
+}
+.plans-container:hover,
+.plans-container:active {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border: 4px solid red;
+  animation: push-package 1000ms ease forwards;
+  -webkit-animation: push-package 1000ms ease forwards;
+}
+
+.plans-container__title {
+  color: black;
+}
+
+.plans-container__subtitle {
+  color: grey;
+}
+
+.plans-container__text {
+  background-color: #fff;
+  border: 1px solid rgb(5, 98, 5);
+  font-size: 1.2rem;
+  padding: 1.2rem;
+  color: rgb(5, 98, 5);
+  font-family: 'AnonymousPro';
+}
+
+.plans-container--first {
+  background-color: rgb(184, 228, 184);
+  margin-top: 6rem;
+  position: relative;
+}
+.plans-container--second {
+  background-color: rgb(219, 237, 217);
+  margin-left: 20%;
+  border: 4px solid green;
+  border-right: none;
+  text-align: right;
+}
+.plans-container--third {
+  background-color: rgb(5, 98, 5);
+}
+.plans-container--third .plans-container__title {
+  color: white;
+}
+
+.background {
+  background: url(../images/plans-background.jpg) center/cover;
+  filter: grayscale(50%);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  -webkit-filter: grayscale(50%);
+}
+
+.plans-container__tag {
+  color: white;
+  background: rgb(226, 71, 37);
+  font-size: 0.8rem;
+  position: absolute;
+  width: 12rem;
+  text-align: center;
+  margin: 0;
+  padding: 0.4rem;
+  right: 0;
+  top: 0;
+  transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+  -webkit-transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+  -moz-transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+  -ms-transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+  -o-transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+}
+
+@media (min-width: 40.75rem) {
+  main {
+    margin: 5rem auto 3rem auto;
+    max-width: 1500px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .plans-container {
+    border: 4px solid green;
+  }
+}
+
+@keyframes push-package {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  33% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+}
